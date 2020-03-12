@@ -1,1 +1,32 @@
 // Mixins in here
+.mixinbutton() { 
+    background-color: aqua;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    padding: 7px;
+    border-radius: 10px;
+
+}
+
+.btn { 
+    .mixinbutton()
+}
+
+.stupidmixin() { 
+   @media @mobile { 
+           flex-direction: column;
+           flex-wrap: wrap;
+           width: 100%;
+           margin: 0;
+           justify-content: center;
+           align-items: center;
+   }
+}
+
+.content-section {
+    
+    .stupidmixin()   
+}
+
